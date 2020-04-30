@@ -1,4 +1,4 @@
-# Localizer
+# Persist manager
 Deploy with: git subtree push --prefix Assets/Scripts/Base/PersistManager origin upm  
 Destination: https://github.com/vcow/lib-persist-manager.git  
 Dependencies:  
