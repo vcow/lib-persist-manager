@@ -9,30 +9,13 @@ namespace Sample
     {
 
 #pragma warning disable 649
-        [SerializeField] private Button _saveButton;
-        [SerializeField] private Button _loadButton;
         [SerializeField] private InputField _input;
         [SerializeField] private Text _output;
 
         [Inject] private readonly IPersistManager _persistentManager;
 #pragma warning restore 649
 
-        private void Start()
-        {
-            _persistentManager.Initialize();
-            
-            _saveButton.onClick.AddListener(Save);
-            
-            _loadButton.onClick.AddListener(Load);
-        }
-
-        private void OnDestroy()
-        {
-            _saveButton.onClick.RemoveAllListeners();
-            _loadButton.onClick.RemoveAllListeners();
-        }
-
-        private void Save()
+        public void OnSave()
         {
             PersistentObject ob = new PersistentObject();
             ob._data = _input.text;
@@ -41,12 +24,11 @@ namespace Sample
 
         }
         
-        private void Load()
+        public void OnLoad()
         {
             PersistentObject ob = new PersistentObject();
             _persistentManager.Restore(ob);
             _output.text = ob._data;
         }
-        
     }
 }
