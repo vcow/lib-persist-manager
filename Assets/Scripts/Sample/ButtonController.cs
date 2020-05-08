@@ -19,7 +19,7 @@ namespace Sample
 
 		public string Id => "test_button_tutorial";
 
-		public bool InstantiatePage(Transform pageContainer, Action<GameObject> callback)
+		public bool InstantiatePage(Transform pageContainer, string metadata, Action<GameObject> callback)
 		{
 			var page = _container.InstantiatePrefabResourceForComponent<ButtonTutorialPage>(
 				"ButtonTutorialPage", pageContainer, new object[] {GetComponent<Button>()});

@@ -151,11 +151,13 @@ namespace Base.PersistManager.TutorialExtensions
 			CurrentPage.CompleteTutorialPageEvent += OnCompletePageHandler;
 			TutorialIsActive = true;
 
-			return InstantiateCurrentPage();
+			var record = GetRecord(page.Id);
+
+			return InstantiateCurrentPage(record?.Metadata ?? "");
 #endif
 		}
 
-		protected abstract bool InstantiateCurrentPage();
+		protected abstract bool InstantiateCurrentPage(string metadata);
 
 		public bool GetPageState(string pageId)
 		{

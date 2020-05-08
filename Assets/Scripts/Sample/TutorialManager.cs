@@ -43,9 +43,9 @@ namespace Sample
 			readyCallback?.Invoke(true);
 		}
 
-		protected override bool InstantiateCurrentPage()
+		protected override bool InstantiateCurrentPage(string metadata)
 		{
-			if (CurrentPage.InstantiatePage(_pageContentContainer, null))
+			if (CurrentPage.InstantiatePage(_pageContentContainer, metadata, null))
 			{
 				CreateLocker();
 				return true;
