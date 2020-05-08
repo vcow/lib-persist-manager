@@ -46,9 +46,11 @@ namespace Base.PersistManager.TutorialExtensions
 		/// Инстанцировать представление страницы.
 		/// </summary>
 		/// <param name="pageContainer">Контейнер страницы в менеджере туториала.</param>
+		/// <param name="metadata">Метаданные, которые были сохранены для этой страницы во
+		/// время предыдущего показа.</param>
 		/// <param name="callback">Коллбек, в который будет возвращен экземпляр созданной страницы.</param>
 		/// <returns>Возвращает <code>true</code>, если страница будет создана.</returns>
-		bool InstantiatePage(Transform pageContainer, Action<GameObject> callback);
+		bool InstantiatePage(Transform pageContainer, string metadata, Action<GameObject> callback);
 
 		/// <summary>
 		/// Событие завершения страницы туториала.
