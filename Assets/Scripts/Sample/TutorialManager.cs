@@ -70,16 +70,19 @@ namespace Sample
 			_locker = null;
 		}
 
-		protected override void OnClosePage(bool complete)
+		protected override void OnCompletePage(ITutorialPage page, CompleteTutorialPageEventArgs args)
 		{
-			base.OnClosePage(complete);
+			base.OnCompletePage(page, args);
 
-			foreach (Transform child in _pageContentContainer)
+			if (args.CloseTutorialPage)
 			{
-				Object.Destroy(child.gameObject);
-			}
+				foreach (Transform child in _pageContentContainer)
+				{
+					Object.Destroy(child.gameObject);
+				}
 
-			DestroyLocker();
+				DestroyLocker();
+			}
 		}
 	}
 }

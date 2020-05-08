@@ -30,7 +30,15 @@ namespace Base.PersistManager.TutorialExtensions
 		/// Возвращает состояние для страницы с указанным ключом.
 		/// </summary>
 		/// <param name="pageId">Ключ страницы туториала.</param>
-		/// <returns>Возвращает <code>true</code>, если страница уже была показана.</returns>
+		/// <param name="metadata">Метаданные, сохраненные для страницы.</param>
+		/// <returns>Возвращает <code>true</code>, если страница отмечена как завершенная.</returns>
+		bool GetPageState(string pageId, out string metadata);
+
+		/// <summary>
+		/// Возвращает состояние для страницы с указанным ключом.
+		/// </summary>
+		/// <param name="pageId">Ключ страницы туториала.</param>
+		/// <returns>Возвращает <code>true</code>, если страница отмечена как завершенная.</returns>
 		bool GetPageState(string pageId);
 	}
 }

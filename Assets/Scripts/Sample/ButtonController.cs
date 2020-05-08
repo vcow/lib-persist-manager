@@ -37,10 +37,10 @@ namespace Sample
 
 			var activatable = (IActivatable) sender;
 			activatable.ActivatableStateChangedEvent -= PageOnActivatableStateChangedEvent;
-			CloseTutorialPageEvent?.Invoke(true);
+			CompleteTutorialPageEvent?.Invoke(this, new CompleteTutorialPageEventArgs());
 		}
 
-		public event Action<bool> CloseTutorialPageEvent;
+		public event EventHandler<CompleteTutorialPageEventArgs> CompleteTutorialPageEvent;
 
 		// \ITutorialPage
 
