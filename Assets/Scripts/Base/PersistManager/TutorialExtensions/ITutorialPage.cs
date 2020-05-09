@@ -55,6 +55,6 @@ namespace Base.PersistManager.TutorialExtensions
 		/// <summary>
 		/// Событие завершения страницы туториала.
 		/// </summary>
-		event EventHandler<CompleteTutorialPageEventArgs> CompleteTutorialPageEvent;
+		event EventHandler CompleteTutorialPageEvent;
 	}
 }

@@ -40,7 +40,7 @@ namespace Sample
 			CompleteTutorialPageEvent?.Invoke(this, new CompleteTutorialPageEventArgs());
 		}
 
-		public event EventHandler<CompleteTutorialPageEventArgs> CompleteTutorialPageEvent;
+		public event EventHandler CompleteTutorialPageEvent;
 
 		// \ITutorialPage
 
