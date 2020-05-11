@@ -1,4 +1,5 @@
 using System;
+using Base;
 using Base.Activatable;
 using Base.PersistManager.TutorialExtensions;
 using UnityEngine;
@@ -40,7 +41,7 @@ namespace Sample
 			CompleteTutorialPageEvent?.Invoke(this, new CompleteTutorialPageEventArgs());
 		}
 
-		public event EventHandler CompleteTutorialPageEvent;
+		public event EventHandler<CompleteTutorialPageEventArgs> CompleteTutorialPageEvent;
 
 		// \ITutorialPage
 

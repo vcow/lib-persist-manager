@@ -118,7 +118,7 @@ namespace Base.PersistManager.TutorialExtensions
 			}
 		}
 
-		public event EventHandler ReadyEvent;
+		public event EventHandler<ReadyEventArgs> ReadyEvent;
 
 		public bool SetCurrentPage(ITutorialPage page)
 		{

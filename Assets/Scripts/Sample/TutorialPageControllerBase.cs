@@ -47,7 +47,7 @@ namespace Sample
 			}
 		}
 
-		public event EventHandler ActivatableStateChangedEvent;
+		public event EventHandler<ActivatableStateChangedEventArgs> ActivatableStateChangedEvent;
 
 		public void Activate(bool immediately = false)
 		{

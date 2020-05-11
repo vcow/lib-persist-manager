@@ -206,6 +206,6 @@ namespace Base.PersistManager
 			_isValid = true;
 		}
 
-		public event EventHandler ReadyEvent;
+		public event EventHandler<ReadyEventArgs> ReadyEvent;
 	}
 }
