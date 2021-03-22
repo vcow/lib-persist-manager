@@ -6,3 +6,5 @@ Dependencies:
 - "vcow.base.logicality": "https://github.com/vcow/lib-logicality.git#1.1.0"
 
 See Wiki for details.
+
+__CAUTION:__ for sample install Extentject and DOTween plugins!
